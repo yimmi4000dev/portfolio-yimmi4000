@@ -1,0 +1,25 @@
+---
+import Experience from '../components/Experience.astro'
+import HelloComponent from '../components/HelloComponent.jsx'
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro About</title>
+</head>
+<body>
+    
+<h1>About xdxd</h1>
+<Experience title="Experiencia 1" text="Descripcion de la experiencia"/>
+<Experience title="Experiencia 2" text="Descripcion de la experiencia"/>
+
+<HelloComponent  client:load/>
+
+<h1>About xdxd</h1>
+
+</body>
+</html>
