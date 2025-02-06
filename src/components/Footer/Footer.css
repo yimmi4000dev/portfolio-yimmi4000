@@ -1,0 +1,28 @@
+.footer {
+  width: 100%; /* Ancho completo */
+  background-color: #1a202c; /* Color de fondo similar a bg-gray-900 */
+  color: white; /* Color del texto */
+  padding: 1rem 0; /* Equivalente a py-4 en Tailwind */
+  margin-top: 2rem; /* Espaciado superior */
+  text-align: center; /* Centrar el texto */
+}
+
+/* Estilos del texto dentro del footer */
+.footer p {
+  font-size: 0.875rem; /* Equivalente a text-sm */
+  margin: 0.25rem 0; /* Espaciado entre elementos */
+}
+
+/* Estilos de los enlaces */
+.footer a {
+  font-size: 0.875rem; /* Tamaño del texto */
+  text-decoration: none; /* Quitar subrayado */
+  transition: color 0.3s ease-in-out; /* Transición de color */
+  display: inline; /* Para que el hover solo afecte el texto */
+  margin: 0 0.5rem; /* Espaciado horizontal entre enlaces */
+}
+
+/* Cambiar color en hover solo cuando el cursor está sobre el texto */
+.footer a:hover {
+  color: #60a5fa; /* Equivalente a hover:text-blue-400 */
+}

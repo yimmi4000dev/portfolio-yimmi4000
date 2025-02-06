@@ -1,25 +1,17 @@
 ---
-import Experience from '../components/Experience.astro'
-import HelloComponent from '../components/HelloComponent.jsx'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Experience from "../components/Experience/Experience.astro";
+import HelloComponent from "../components/HelloComponent.jsx";
 ---
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro About</title>
-</head>
-<body>
-    
-<h1>About xdxd</h1>
-<Experience title="Experiencia 1" text="Descripcion de la experiencia"/>
-<Experience title="Experiencia 2" text="Descripcion de la experiencia"/>
-
-<HelloComponent  client:load/>
-
-<h1>About xdxd</h1>
-
-</body>
-</html>
+<BaseLayout>
+  <h1 class="text-3xl font-bold">Sobre mí</h1>
+  <p>
+    Hola, soy Yimmi4000, un desarrollador apasionado por el código limpio y bien
+    estructurado.
+  </p>
+  <h1>About xdxd</h1>
+  <Experience title="Experiencia 1" text="Descripcion de la experiencia" />
+  <Experience title="Experiencia 2" text="Descripcion de la experiencia" />
+  <HelloComponent client:load />
+</BaseLayout>
