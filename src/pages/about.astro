@@ -1,17 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Experience from "../components/Experience/Experience.astro";
-import HelloComponent from "../components/HelloComponent.jsx";
 ---
 
 <BaseLayout>
+  <!-- h1                    CSS PURO        ==   TAILWIND
+  (Tamaño de la fuente): font-size: 3rem;    == text-3xl - establece el tamaño del texto a 3 veces el tamaño base
+  (Negrita)            : font-weight: bold;  == font-bold - aplica negrita al texto -->
   <h1 class="text-3xl font-bold">Sobre mí</h1>
+
   <p>
-    Hola, soy Yimmi4000, un desarrollador apasionado por el código limpio y bien
-    estructurado.
+    Hola, soy Yimmy Fabian Muñoz Rincon, desarrollador de software apasionado
+    con un título en Ingeniería de Sistemas en la Universidad de la Amazonia en
+    Colombia. He trabajado en la creación de páginas web, diversos proyectos
+    propios y universitarios. Me apasiona la innovación tecnológica y la calidad
+    en el desarrollo de soluciones digitales. También complemento mi formación
+    académica con aprendizaje autónomo utilizando diversas plataformas
+    digitales.
   </p>
-  <h1>About xdxd</h1>
+
+
+  <h2 class="text-2xl font-bold">Habilidades</h2>
+  <p>
+    Java JavaScript C# C++ Node.js Express.Js .NET HTML CSS Unity MYSQL
+    PostgreSQL MONGODB Adobe Photoshop Adobe Illustrator CorelDraw Desarrollo
+    IoT Comunicación MQTT
+    (Aqui poner cada una con su respectivo logo y en carrucel de movimiento)
+  </p>
+
+  <h2 class="text-2xl font-bold">Experiencia</h2>
   <Experience title="Experiencia 1" text="Descripcion de la experiencia" />
   <Experience title="Experiencia 2" text="Descripcion de la experiencia" />
-  <HelloComponent client:load />
+  
 </BaseLayout>
