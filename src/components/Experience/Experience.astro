@@ -1,9 +1,20 @@
 ---
-import './Experience.css';
-const { title, text } = Astro.props;
+import "./Experience.css";
+const { title, description, time, technologies = [] } = Astro.props;
 ---
 
 <div class="experience">
+  <!--Titulo de la experiencia -->
   <h1>{title}</h1>
-  <p>{text}</p>
+  <!--Descripcion de la experiencia -->
+  <p>{description}</p>
+  <!--Tiempo de duracion de la experiencia -->
+  <p>{time}</p>
+  <!--Tiempo de duracion de la experiencia -->
+  <div class="tech-container">
+    {technologies.map((tech: string) => {
+      return <span class="tech-badge">{tech}</span>;
+    })}
+    
+  </div>
 </div>

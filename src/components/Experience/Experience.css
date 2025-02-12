@@ -1,7 +1,25 @@
+/* Estilo para la tarjeta Experience */
 .experience {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgb(0, 0, 0);
-  margin: 10px;
+  margin: 20px;
+}
+
+/* Estilo el contenedor de los nombres de las tecnologias utilizadas */
+.tech-container {
+  display: flex; /* Alinear en fila */
+  gap: 8px; /* Espacio entre las etiquetas */
+}
+
+/* Estilo para las tecnologias utilizadas */
+.tech-badge {
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 6px 12px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  display: inline-block; /* Mantener el tamaño del contenido */
 }
