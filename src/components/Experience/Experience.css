@@ -10,6 +10,7 @@
 /* Estilo el contenedor de los nombres de las tecnologias utilizadas */
 .tech-container {
   display: flex; /* Alinear en fila */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
   gap: 8px; /* Espacio entre las etiquetas */
 }
 

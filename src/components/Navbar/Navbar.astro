@@ -1,19 +1,30 @@
 ---
-import './Navbar.css';
+import "./Navbar.css";
+const { activePage } = Astro.props;
 ---
 
 <nav>
   <ul class="navbar">
     <li>
-      <a href="/" class="nav-link">Inicio</a>
+      <a href="/" class={`nav-link ${activePage === "index" ? "active" : ""}`}>
+        Inicio
+      </a>
     </li>
     <li>
-      <a href="/about" class="nav-link">Sobre mí</a>
+      <a
+        href="/about"
+        class={`nav-link ${activePage === "about" ? "active" : ""}`}
+      >
+        Sobre mí
+      </a>
     </li>
     <li>
-      <a href="/projects" class="nav-link">Proyectos</a>
+      <a
+        href="/projects"
+        class={`nav-link ${activePage === "projects" ? "active" : ""}`}
+      >
+        Proyectos
+      </a>
     </li>
   </ul>
 </nav>
-
-  

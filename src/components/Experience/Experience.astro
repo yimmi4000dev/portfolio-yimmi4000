@@ -12,9 +12,10 @@ const { title, description, time, technologies = [] } = Astro.props;
   <p>{time}</p>
   <!--Tiempo de duracion de la experiencia -->
   <div class="tech-container">
-    {technologies.map((tech: string) => {
-      return <span class="tech-badge">{tech}</span>;
-    })}
-    
+    {
+      technologies.map((tech: string) => {
+        return <span class="tech-badge">{tech}</span>;
+      })
+    }
   </div>
 </div>

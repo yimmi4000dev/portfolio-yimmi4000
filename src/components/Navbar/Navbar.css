@@ -1,17 +1,24 @@
 .navbar {
-    display: flex;
-    gap: 1.5rem; /* Adjust the space between items as needed */
-  }
-  
-  .nav-link {
-    color: #4a4a4a; /* text-gray-700 */
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s, border-color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #3b82f6; /* hover:text-blue-500 */
-    border-color: #3b82f6; /* hover:border-blue-500 */
-  }
-  
+  display: flex;
+  gap: 1.5rem; /* Adjust the space between items as needed */
+}
+
+.nav-link {
+  color: #4a4a4a; /* Color gris por defecto */
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* Color azul al pasar el mouse */
+  background-color: #e5f4f4; /* Fondo gris claro al pasar el mouse */
+}
+
+.nav-link.active {
+  color: #ffffff; /* Texto blanco */
+  background-color: #3b82f6; /* Fondo azul */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 0.5rem; /* Bordes redondeados */
+}
