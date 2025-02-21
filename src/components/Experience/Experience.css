@@ -7,6 +7,23 @@
   margin: 20px;
 }
 
+.experience h1 {
+  font-size: 1.5rem;
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 0.5rem;
+}
+
+.experience p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.p_date {
+  font-size: 1rem;
+  /* margin-bottom: 0.5rem; */
+  font-weight: bold; /* Texto en negrita */
+}
+
 /* Estilo el contenedor de los nombres de las tecnologias utilizadas */
 .tech-container {
   display: flex; /* Alinear en fila */

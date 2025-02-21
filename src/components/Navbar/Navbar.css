@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   gap: 1.5rem; /* Adjust the space between items as needed */
+  font-size: 1rem;
 }
 
 .nav-link {

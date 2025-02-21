@@ -14,7 +14,7 @@
   max-width: 1200px; /* container */
   margin: 0 auto; /* mx-auto */
   display: flex; /* flex */
-  justify-content: space-between; /* justify-between */
+  justify-content: center; /* justify-between */
   align-items: center; /* items-center */
   padding: 1rem; /* p-4 */
 }
