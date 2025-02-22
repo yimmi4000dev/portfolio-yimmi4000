@@ -1,28 +1,39 @@
 .footer {
-  width: 100%; /* Ancho completo */
-  background-color: #3b82f6; /* Color de fondo similar a bg-gray-900 */
-  color: white; /* Color del texto */
-  padding: 1rem 0; /* Equivalente a py-4 en Tailwind */
-  margin-top: 2rem; /* Espaciado superior */
-  text-align: center; /* Centrar el texto */
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  text-align: center;
 }
 
-/* Estilos del texto dentro del footer */
 .footer p {
-  font-size: 0.875rem; /* Equivalente a text-sm */
-  margin: 0.25rem 0; /* Espaciado entre elementos */
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
 }
 
-/* Estilos de los enlaces */
-.footer a {
-  font-size: 0.875rem; /* Tamaño del texto */
-  text-decoration: none; /* Quitar subrayado */
-  transition: color 0.3s ease-in-out; /* Transición de color */
-  display: inline; /* Para que el hover solo afecte el texto */
-  margin: 0 0.5rem; /* Espaciado horizontal entre enlaces */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-/* Cambiar color en hover solo cuando el cursor está sobre el texto */
-.footer a:hover {
-  color: #ea9d8b; /* Equivalente a hover:text-blue-400 */
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.links a:hover {
+  color: #ea9d8b;
+  opacity: 0.75;
+  font-weight: bold; /* Texto en negrita */
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
 }
