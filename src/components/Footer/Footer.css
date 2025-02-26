@@ -1,21 +1,24 @@
 .footer {
   width: 100%;
-  background-color: #3b82f6;
-  color: white;
+  background-color: white; /* Fondo blanco */
+  border-top: 3px solid #3b82f6; /* Línea delgada azul en la parte superior */
+  color: #4a4a4a;
   padding: 1rem 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
 .footer p {
   font-size: 0.85rem;
   margin: 0.25rem 0;
+  margin-bottom: 0.5rem;
 }
 
 .links {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .links a {
@@ -23,14 +26,14 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: white;
+  color: #4a4a4a;
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .links a:hover {
-  color: #ea9d8b;
-  opacity: 0.75;
-  font-weight: bold; /* Texto en negrita */
+  /* color: #d6644a; */
+   opacity: 0.75; 
+  font-weight: bold;   /*Texto en negrita */
 }
 
 .icon {
