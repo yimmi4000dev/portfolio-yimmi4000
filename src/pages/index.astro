@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 // import "../styles/global.css";
+import portada from "../assets/images/portada-portafolio-jpg.jpg"              // Importar ruta de forma modular
 ---
 
 <!--
@@ -43,7 +44,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       block        : Evita espacios no deseados debajo de la imagen.
     -->
     <img
-      src="public/images/portada-portafolio-jpg.jpg"
+      src={portada}
       alt="Imagen de bienvenida al portafolio"
       class="w-full aspect-[32/9] object-cover block"
     />
