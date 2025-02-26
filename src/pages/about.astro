@@ -4,9 +4,11 @@ import Experience from "../components/Experience/Experience.astro";
 ---
 
 <BaseLayout activePage="about">
-  <h1 class="text-5xl font-bold text-center mt-16 mb-4">Sobre mí</h1>
+  <!-- Titulo de la pagina about  -->
+  <h1 class="text-[3rem] font-bold text-center mt-16 mb-4">Acerca de mí</h1>
 
-  <p class="text-base text-center mb-4">
+  <!-- Parrafo introductorio -->
+  <p class="text-base text-center mb-2 text-[#4a4a4a]">
     Hola, soy Yimmy Fabian Muñoz Rincon, desarrollador de software apasionado
     con un título en Ingeniería de Sistemas en la Universidad de la Amazonia en
     Colombia. He trabajado en la creación de páginas web, diversos proyectos
@@ -15,14 +17,14 @@ import Experience from "../components/Experience/Experience.astro";
     académica con aprendizaje autónomo utilizando diversas plataformas
     digitales.
   </p>
-
-  <p class="text-base text-center mb-4">
+  <p class="text-base text-center mb-4 text-[#4a4a4a]">
     Me apasiona aprender nuevas tecnologías y enfrentar desafíos que me permitan
     crecer como profesional. Siempre estoy buscando oportunidades para colaborar
     en proyectos interesantes y contribuir al éxito de equipos dinámicos.
   </p>
 
-  <h2 class="text-2xl font-bold mt-12">Habilidades</h2>
+  <!-- Sub titulo de la pagina about (Habilidades) -->
+  <h2 class="text-[2rem] font-bold mt-8 mb-4 text-[#2a2a2a]">Habilidades</h2>
   <p class="text-base mb-4">
     Java JavaScript C# C++ Node.js Express.Js .NET HTML CSS Unity MYSQL
     PostgreSQL MONGODB Adobe Photoshop Adobe Illustrator CorelDraw Desarrollo
@@ -30,55 +32,62 @@ import Experience from "../components/Experience/Experience.astro";
     carrucel de movimiento)
   </p>
 
-  <h2 class="text-2xl font-bold mt-12">Experiencia</h2>
+  <!-- Sub titulo de la pagina about (Experiencia) -->
+  <h2 class="text-[2rem] font-bold mt-8 mb-4 text-[#2a2a2a]">Experiencia</h2>
 
+  <!-- Tarjeta de experiencia 1 -->
   <Experience
-    title="Desarrollador front-end"
-    description="En RGA Laboratorio Naturista Amazónico, me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
-    
-    time="04/2022 - 08/2022"
+    time="│ Abril - Agosto 2022"
+    title="Desarrollador front-end · RGA Laboratorio Naturista Amazónico"
+    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
     technologies={[
       "React",
       "Node.js",
       "Express",
       "PostgreSQL",
+      "HTML & CSS",
       "Wompi",
       "Hostinger",
     ]}
   />
 
+  <!-- Tarjeta de experiencia 2 -->
   <Experience
-    title="Desarrollador front-end"
-    description="En RGA Ingenieros Metalurgicos, me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
-    time="04/2022 - 08/2022"
+    time="│ Abril - Agosto 2022"
+    title="Desarrollador front-end · RGA Ingenieros Metalurgicos"
+    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
     technologies={[
       "React",
       "Node.js",
       "Express",
       "PostgreSQL",
+      "HTML & CSS",
       "Wompi",
       "Hostinger",
     ]}
   />
 
+  <!-- Tarjeta de experiencia 3 -->
   <Experience
-    title="Desarrollador front-end"
-    description="En ONG Preparación Metalmecánica, me especialicé en el desarrollo del frontend para su página web. Creé una interfaz de usuario clara y funcional, con secciones para publicaciones de noticias, imágenes con descripciones, y formularios para la inscripción a cursos y contribuciones al fondo de la organización. Este proyecto permitió a la ONG mejorar su alcance y facilitar la interacción con sus beneficiarios y donantes."
-    time="04/2022 - 08/2022"
+    time="│ Abril - Septiembre 2022"
+    title="Desarrollador front-end · ONG Preparación Metalmecánica"
+    description="Me especialicé en el desarrollo del frontend para su página web. Creé una interfaz de usuario clara y funcional, con secciones para publicaciones de noticias, imágenes con descripciones, y formularios para la inscripción a cursos y contribuciones al fondo de la organización. Este proyecto permitió a la ONG mejorar su alcance y facilitar la interacción con sus beneficiarios y donantes."
     technologies={[
       "React",
       "Node.js",
       "Express",
       "PostgreSQL",
+      "HTML & CSS",
       "Wompi",
       "Hostinger",
     ]}
   />
 
+  <!-- Tarjeta de experiencia 4 -->
   <Experience
-    title="Diseñador grafico"
-    description="Mi rol en Tonny Sport fue especializarme en el diseño de uniformes deportivos para disciplinas como fútbol, baloncesto y voleibol. Me encargué de la creación de plantillas y diseños personalizados, utilizando herramientas como Adobe Illustrator y Corel Draw. Además, realicé intervenciones en imágenes y logos proporcionados por los clientes, optimizando su calidad y adaptándolos para su uso en los uniformes. También me especialicé en la vectorización de escudos y logos corporativos, asegurando que los diseños fueran precisos y de alta calidad."
-    time="01/2022 - 03/2024"
+    time="│ 2022 - 2024"
+    title="Diseñador grafico · Tonny Sport"
+    description="Me especialicé en el diseño de uniformes deportivos para disciplinas como fútbol, baloncesto y voleibol. Me encargué de la creación de plantillas y diseños personalizados, utilizando herramientas como Adobe Illustrator y Corel Draw. Además, realicé intervenciones en imágenes y logos proporcionados por los clientes, optimizando su calidad y adaptándolos para su uso en los uniformes. También me especialicé en la vectorización de escudos y logos corporativos, asegurando que los diseños fueran precisos y de alta calidad."
     technologies={["Adobe Photoshop", "Adobe Illustrator", "CorelDraw"]}
   />
 </BaseLayout>

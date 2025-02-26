@@ -4,13 +4,16 @@ const { title, description, time, technologies = [] } = Astro.props;
 ---
 
 <div class="experience">
-  <!--Titulo de la experiencia -->
-  <h1>{title}</h1>
-  <!--Descripcion de la experiencia -->
-  <p>{description}</p>
   <!--Tiempo de duracion de la experiencia -->
   <p class="p_date">{time}</p>
-  <!--Tiempo de duracion de la experiencia -->
+
+  <!--Titulo de la experiencia -->
+  <h1>{title}</h1>
+
+  <!--Descripcion de la experiencia -->
+  <p class="p_description">{description}</p>
+
+  <!--Habilidades utilizadas -->
   <div class="tech-container">
     {
       technologies.map((tech: string) => {

@@ -1,36 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-// import "../styles/global.css";
 ---
 
 <!--
-  .     CSS PURO       ==     TAILWIND
-  font-size: 1rem;     ==  text-base      - establece el tamaño del texto base de 1rem
-  font-size: 2rem;     ==  text-2xl       - establece el tamaño del texto de 2rem
-  font-size: 3rem;     ==  text-5xl       - establece el tamaño del texto de 3rem
-  font-size: nrem;     ==  text-[0.75rem] - para poner el rem en un valor personalizado o decimal
-
-  font-weight: bold;   ==  font-bold      - aplica negrita al texto 
-
-  margin-top: 4rem;    ==  mt-16          - aplica un espacio de margen superior de 4rem
-  margin-bottom: 1rem; ==  mb-4           - aplica un espacio de margen inferior de 1rem
-
-  bg-blue-500: Color de fondo del botón.
-  text-white: Color del texto.
-  px-6 py-3: Padding horizontal y vertical.
-  rounded-lg: Bordes redondeados.
-  hover:bg-blue-600: Cambia el color de fondo al pasar el mouse.
-  transition duration-300: Agrega una transición suave.
-
-  aspect-[21/9]: Mantiene la relación de aspecto 21:9 sin importar el tamaño de la pantalla.
-  object-cover : Asegura que la imagen cubra todo el espacio sin distorsionarse.
-  block        : Evita espacios no deseados debajo de la imagen.
+  ░.        CSS PURO              ==    TAILWIND
+  ░ font-size: 1rem;              ==  text-base               - establece el tamaño del texto base de 1rem
+  ░ font-size: 2rem;              ==  text-2xl                - establece el tamaño del texto de 2rem
+  ░ font-size: 3rem;              ==  text-5xl                - establece el tamaño del texto de 3rem
+  ░ font-size: nrem;              ==  text-[0.75rem]          - para poner el rem en un valor personalizado o decimal
+  ░ font-weight: bold;            ==  font-bold               - aplica negrita al texto (titulo h1)
+  ░ margin-top: 4rem;             ==  mt-16                   - aplica un espacio de margen superior de 4rem (titulo h1)
+  ░ margin-bottom: 1rem;          ==  mb-4                    - aplica un espacio de margen inferior de 1rem
+  ░ background-color: #3b82f6;    ==  bg-[#3b82f6]            - Color de fondo del botón
+  ░ color: #4a4a4a;               ==  text-[#4a4a4a]          - Color del texto
+  ░ padding-left: 1rem;           ==  px-4                    - Padding horizontal
+  ░ --padding-right: 1.5rem;
+  ░ padding-top: 0.75rem;         ==  py-3                    - Padding vertical
+  ░ border-radius: 0.5rem;        ==  rounded-lg              - Bordes redondeados
+  ░ &:hover {                     ==  hover:bg-[#6896db]      - Cambia el color de fondo al pasar el mouse
+  ░ --background-color: #6896db;
+  ░ --}
+  ░ transition-property: all;     == transition duration-300  - Agrega una transición suave
+  ░ --transition-duration: 300ms;
+  ░ aspect-ratio: 21 / 9;         == aspect-[32/9]            - Mantiene la relación de aspecto 21:9 sin importar el tamaño de la pantalla
+  ░ object-fit: cover;            == object-cover             - Asegura que la imagen cubra todo el espacio sin distorsionarse
+  ░ display: block;               == block                    - Evita espacios no deseados debajo de la imagen
   -->
 <BaseLayout activePage="index">
-  <h1 class="text-5xl font-bold text-center mt-16 mb-4">
+  <!-- Titulo de la pagina index -->
+  <h1 class="text-[3rem] font-bold text-center mt-16 mb-4">
     Bienvenido a mi Portafolio
   </h1>
 
+  <!-- Parrafo introductorio -->
   <p class="text-base text-center mb-4 text-[#4a4a4a]">
     Ingeniero de sistemas apasionado por la tecnología y el diseño de software,
     con experiencia en el desarrollo de software y en la creación de soluciones
@@ -40,6 +42,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     generen un impacto positivo.
   </p>
 
+  <!-- Imagen de portada -->
   <div>
     <img
       src="/images/portada-portafolio-jpg.jpg"
@@ -48,20 +51,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     />
   </div>
 
-  <p class="text-[0.75rem] text-right mt-2 mb-8 text-[#4a4a4a]">
+  <!-- Pie de imagen de portada -->
+  <p class="text-[0.75rem] text-right mt-2 mb-4 text-[#4a4a4a]">
     "Codificando el futuro, un proyecto a la vez"
   </p>
 
-  <!-- Botón de descarga -->
-  <p class="text-base mb-4 text-[#4a4a4a]">
+  <!-- Parrafo indicativo para descargar el CV -->
+  <p class="text-base mt8 mb-4 text-[#4a4a4a]">
     Aquí puedes descargar mi CV para conocer más sobre mi.
   </p>
 
+  <!-- Botón de descarga para el CV -->
   <a
     href="/pdf/Yimmy-Muñoz-CV.pdf"
     download="CV-Yimmy-Munoz.pdf"
-    class="inline-flex items-center bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition duration-300 mb-4 text-[0.75rem]"
+    class="inline-flex items-center bg-[#3b82f6] text-white px-4 py-3 rounded-lg hover:bg-[#6896db] transition duration-300 mb-4 text-[0.75rem]"
   >
+    <!-- Icono de descarga -->
     <img
       src="/images/descarga-png.png"
       alt="Ícono de descarga"
