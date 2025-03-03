@@ -27,12 +27,14 @@ import Experience from "../components/Experience/Experience.astro";
   <h2 class="text-[2rem] font-bold mt-8 mb-4 text-[#2a2a2a]">Habilidades</h2>
 
   <!-- Contenedor de imagenes para el carrucel -->
-  <div class="logos-container overflow-hidden relative">
+  <div class="logos-container overflow-hidden">
     <!-- Contenedor de imagenes -->
-    <div class="logos-track flex animate-scroll">
+    <div
+      class="logos-track flex animate-scroll overflow-x-scroll"
+    >
       <!-- Fila que contiene los logos -->
       <!-- Logo 1 -->
-      <div class="logo-item px-6">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/Java.png"
           alt="Java Logo"
@@ -42,7 +44,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 2 -->
-      <div class="logo-item px-6">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/JavaScript.png"
           alt="JavaScript Logo"
@@ -52,7 +54,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 3 -->
-      <div class="logo-item px-6">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/Cchat.png"
           alt="C# Logo"
@@ -62,7 +64,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 4 -->
-      <div class="logo-item px-6">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/C++.png"
           alt="C++ Logo"
@@ -73,7 +75,7 @@ import Experience from "../components/Experience/Experience.astro";
 
       <!-- Duplicamos los logos para el efecto continuo, solo si son poquitos, de lo contrario no se duplican -->
       <!-- Logo 1 -->
-      <div class="logo-item">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/Java.png"
           alt="Java Logo"
@@ -83,7 +85,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 2 -->
-      <div class="logo-item">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/JavaScript.png"
           alt="JavaScript Logo"
@@ -93,7 +95,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 3 -->
-      <div class="logo-item">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/Cchat.png"
           alt="C# Logo"
@@ -103,7 +105,7 @@ import Experience from "../components/Experience/Experience.astro";
       </div>
 
       <!-- Logo 4 -->
-      <div class="logo-item">
+      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
         <img
           src="/images/C++.png"
           alt="C++ Logo"
@@ -191,27 +193,37 @@ import Experience from "../components/Experience/Experience.astro";
     .logos-track.paused {
       animation-play-state: paused;
     }
+
+    /* Oculta la barra de desplazamiento en todos los navegadores */
+    .logos-track::-webkit-scrollbar {
+      display: none; /* Chrome, Safari y Opera */
+    }
+
+    .logos-track {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer y Edge */
+    }
   </style>
 
   <!-- Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Define el tipo de "track" como HTMLElement
-      const track = document.querySelector(".logos-track");
+      const track = document.querySelector(".logos-track") as HTMLElement;
       if (!track) return; // Asegúrate de que "track" existe
 
       let isDragging = false;
       let startX = 0;
       let scrollLeft = 0;
 
-      track.addEventListener("mousedown", (e) => {
+      track.addEventListener("mousedown", (e: MouseEvent) => {
         isDragging = true;
         startX = e.pageX - track.offsetLeft;
         scrollLeft = track.scrollLeft;
         track.classList.add("paused");
       });
 
-      track.addEventListener("mousemove", (e) => {
+      track.addEventListener("mousemove", (e: MouseEvent) => {
         if (!isDragging) return;
         e.preventDefault();
         const x = e.pageX - track.offsetLeft;

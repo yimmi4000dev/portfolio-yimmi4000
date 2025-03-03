@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
+import scrollbarHide from "tailwind-scrollbar-hide"; // Importa el plugin
 
 import react from "@astrojs/react";
 
@@ -11,3 +12,4 @@ export default defineConfig({
   },
   integrations: [react()],
 });
+
