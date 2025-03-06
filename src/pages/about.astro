@@ -24,128 +24,472 @@ import Experience from "../components/Experience/Experience.astro";
   </p>
 
   <!-- Sub titulo de la pagina about (Habilidades) -->
-  <h2 class="text-[2rem] font-bold mt-8 mb-4 text-[#2a2a2a]">Habilidades</h2>
+  <h2 class="text-[2rem] font-bold mt-10 mb-4 text-[#2a2a2a]">Habilidades</h2>
 
-  <!-- Contenedor de imagenes para el carrucel -->
-  <div class="logos-container overflow-hidden">
-    <!-- Contenedor de imagenes -->
-    <div
-      class="logos-track flex animate-scroll overflow-x-scroll"
-    >
-      <!-- Fila que contiene los logos -->
-      <!-- Logo 1 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Java.png"
-          alt="Java Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+  <!-- =========================================================================================================== -->
 
-      <!-- Logo 2 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/JavaScript.png"
-          alt="JavaScript Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+  <!-- Contenedor de imagenes para el carrucel1 -->
+  <div
+    class="carousel1 flex gap-10 py-2 overflow-x-auto whitespace-nowrap cursor-grab [&::-webkit-scrollbar]:hidden"
+  >
+    <!-- Fila que contiene los logos -->
+    <!-- Logo 1 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Java.png"
+        alt="Java Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 3 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Cchat.png"
-          alt="C# Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 2 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/JavaScript.png"
+        alt="JavaScript Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 4 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/C++.png"
-          alt="C++ Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 3 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Cchat.png"
+        alt="C# Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 5 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Node.png"
-          alt="Java Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 4 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/C++.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 6 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Express.png"
-          alt="JavaScript Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 5 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Node.png"
+        alt="Java Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 7 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Net.png"
-          alt="C# Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 6 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Express.png"
+        alt="JavaScript Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 8 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/HTML.png"
-          alt="C++ Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 7 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Net.png"
+        alt="C# Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 9 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/CSS.png"
-          alt="C++ Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 8 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/HTML.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
-      <!-- Logo 10 -->
-      <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
-        <img
-          src="/images/Unity.png"
-          alt="C++ Logo"
-          class="w-full h-full"
-          draggable="false"
-        />
-      </div>
+    <!-- Logo 9 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/CSS.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
+    <!-- Logo 10 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Unity.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
+    <!-- Logo 11 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MYSQL.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
 
+    <!-- Logo 12 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/PostgreSQL.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 13 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MONGODB.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 14 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Photoshop.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 15 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Illustrator.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 16 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/CorelDraw.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 17 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/IoT.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 18 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MQTT.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 19 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/React.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 20 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Tailwind.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 21 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Astro.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 22 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Vercel.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+  </div>
+
+  <!-- =========================================================================================================== -->
+
+  <!-- Contenedor de imagenes para el carrucel2 -->
+  <div
+    class="carousel2 flex gap-10 py-2 overflow-x-auto whitespace-nowrap cursor-grab [&::-webkit-scrollbar]:hidden mt-4"
+  >
+    <!-- Fila que contiene los logos -->
+    <!-- Logo 1 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Java.png"
+        alt="Java Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 2 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/JavaScript.png"
+        alt="JavaScript Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 3 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Cchat.png"
+        alt="C# Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 4 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/C++.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 5 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Node.png"
+        alt="Java Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 6 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Express.png"
+        alt="JavaScript Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 7 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Net.png"
+        alt="C# Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 8 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/HTML.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 9 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/CSS.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 10 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Unity.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 11 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MYSQL.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 12 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/PostgreSQL.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 13 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MONGODB.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 14 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Photoshop.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 15 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Illustrator.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 16 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/CorelDraw.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 17 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/IoT.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 18 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/MQTT.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 19 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/React.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 20 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Tailwind.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 21 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Astro.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
+    </div>
+
+    <!-- Logo 22 -->
+    <div class="logo-item w-[100px] h-[50px] flex-shrink-0">
+      <img
+        src="/images/Vercel.png"
+        alt="C++ Logo"
+        class="w-full h-full"
+        draggable="false"
+      />
     </div>
   </div>
 
   <!-- Sub titulo de la pagina about (Experiencia) -->
-  <h2 class="text-[2rem] font-bold mt-8 mb-4 text-[#2a2a2a]">Experiencia</h2>
+  <h2 class="text-[2rem] font-bold mt-10 mb-4 text-[#2a2a2a]">Experiencia</h2>
 
   <!-- Tarjeta de experiencia 1 -->
   <Experience
     time="Abril - Agosto 2022"
     title="Desarrollador front-end · RGA Laboratorio Naturista Amazónico"
-    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
+    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Además de colaborar en la documentación y creación del manual de usuario. Este proyecto permitió a la empresa modernizar sus ventas en línea."
     technologies={[
       "React",
       "Node.js",
@@ -161,7 +505,7 @@ import Experience from "../components/Experience/Experience.astro";
   <Experience
     time="Abril - Agosto 2022"
     title="Desarrollador front-end · RGA Ingenieros Metalurgicos"
-    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Este proyecto permitió a la empresa modernizar sus ventas en línea."
+    description="Me especialicé en el desarrollo del frontend para un e-commerce. Mi trabajo incluyó la disposición de componentes, la gestión de imágenes y la presentación de productos, así como la navegación entre páginas. Utilicé React para crear una interfaz de usuario atractiva y funcional, y colaboré en la integración de una pasarela de pagos y en el despliegue de la aplicación. Además de colaborar en la documentación y creación del manual de usuario. Este proyecto permitió a la empresa modernizar sus ventas en línea."
     technologies={[
       "React",
       "Node.js",
@@ -197,71 +541,75 @@ import Experience from "../components/Experience/Experience.astro";
     technologies={["Adobe Photoshop", "Adobe Illustrator", "CorelDraw"]}
   />
 
-  <!-- Estilos -->
-  <style>
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .animate-scroll {
-      animation: scroll 20s linear infinite;
-    }
-
-    .logos-track.paused {
-      animation-play-state: paused;
-    }
-
-    /* Oculta la barra de desplazamiento en todos los navegadores */
-    .logos-track::-webkit-scrollbar {
-      display: none; /* Chrome, Safari y Opera */
-    }
-
-    .logos-track {
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer y Edge */
-    }
-  </style>
-
-  <!-- Script -->
+  <!-- Script con TypeScript -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Define el tipo de "track" como HTMLElement
-      const track = document.querySelector(".logos-track") as HTMLElement;
-      if (!track) return; // Asegúrate de que "track" existe
+    // Inicia cuando la pagina haya cargado antes del DOM
+    document.addEventListener("DOMContentLoaded", function () {  
+      // Función que configura un carrusel
+  function setupCarousel(carousel: HTMLElement, direction: number) {  
+    // Variables importantes
+    let isDragging = false;  //  Indica si el usuario está arrastrando el carrusel
+    let startX = 0;  // Guarda la posición inicial del mouse al hacer clic
+    let scrollLeft = 0;  // Guarda la posición de desplazamiento antes de arrastrar
+    const scrollSpeed = 0.5;  // Velocidad del desplazamiento automático
+    let animationId: number | null = null;  // Guarda el ID del setInterval para poder detenerlo y evitar duplicados
 
-      let isDragging = false;
-      let startX = 0;
-      let scrollLeft = 0;
+    // Ajustar posición inicial del carrusel
+    carousel.scrollLeft = direction === -1 ? carousel.scrollWidth - carousel.clientWidth : 0;
 
-      track.addEventListener("mousedown", (e: MouseEvent) => {
-        isDragging = true;
-        startX = e.pageX - track.offsetLeft;
-        scrollLeft = track.scrollLeft;
-        track.classList.add("paused");
-      });
+    // Iniciar desplazamiento automático (evita duplicados)
+    function startAutoScroll() {
+      if (animationId !== null) return; // Si ya está en marcha, no iniciar otra vez
+      animationId = setInterval(() => {
+        carousel.scrollLeft += direction * scrollSpeed;
+        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+          direction = -1;
+        } else if (carousel.scrollLeft <= 0) {
+          direction = 1;
+        }
+      }, 1);
+    }
 
-      track.addEventListener("mousemove", (e: MouseEvent) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - track.offsetLeft;
-        const walk = (x - startX) * 2;
-        track.scrollLeft = scrollLeft - walk;
-      });
+    // Detener desplazamiento automático
+    function stopAutoScroll() {
+      if (animationId !== null) {
+        clearInterval(animationId);
+        animationId = null;
+      }
+    }
 
-      track.addEventListener("mouseup", () => {
-        isDragging = false;
-        track.classList.remove("paused");
-      });
+    // Iniciar la animación automática solo una vez
+    startAutoScroll();
 
-      track.addEventListener("mouseleave", () => {
-        isDragging = false;
-        track.classList.remove("paused");
-      });
+    // Eventos para arrastrar manualmente
+    carousel.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      stopAutoScroll();
+      startX = e.pageX;
+      scrollLeft = carousel.scrollLeft;
     });
+
+    // Cuando el usuario mueve el mouse
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      carousel.scrollLeft = scrollLeft - (e.pageX - startX) * 2;
+    });
+
+    // Cuando el usuario suelta el mouse
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+      startAutoScroll(); // Reanudar el desplazamiento pero solo si no está ya corriendo
+    });
+  }
+
+  // Busca los elementos del DOM con las clases carousel1 y carousel2
+  const carousel1 = document.querySelector(".carousel1") as HTMLElement;
+  const carousel2 = document.querySelector(".carousel2") as HTMLElement;
+
+  //  Inicia cada carrusel con su dirección correspondiente
+  if (carousel1) setupCarousel(carousel1, 1);
+  if (carousel2) setupCarousel(carousel2, -1);
+});
+
   </script>
 </BaseLayout>

@@ -14,6 +14,10 @@
   box-shadow: 0 0px 50px #ececec;
 }
 
+.experience:hover h1 {
+  color: #6399a4;
+}
+
 .p_date {
   font-size: 1rem;
   color: #727272;
