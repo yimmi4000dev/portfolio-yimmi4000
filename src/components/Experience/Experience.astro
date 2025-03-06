@@ -1,6 +1,7 @@
 ---
 import "./Experience.css";
 const { title, description, time, technologies = [] } = Astro.props;
+const maxChars = 250; // Límite de caracteres antes de mostrar "Ver más"
 ---
 
 <div class="experience">
@@ -11,7 +12,19 @@ const { title, description, time, technologies = [] } = Astro.props;
   <h1>{title}</h1>
 
   <!--Descripcion de la experiencia -->
-  <p class="p_description">{description}</p>
+  <!-- <p class="p_description">{description}</p> -->
+  <!-- Descripción con botón "Ver más" -->
+  <p class="p_description">
+    <span class="short">{description.slice(0, maxChars)}...</span>
+    <span class="full hidden">{description}</span>
+    {
+      description.length > maxChars && (
+        <button class="toggle-btn text-blue-500 hover:underline ml-2">
+          Ver más
+        </button>
+      )
+    }
+  </p>
 
   <!--Habilidades utilizadas -->
   <div class="tech-container">
@@ -22,3 +35,30 @@ const { title, description, time, technologies = [] } = Astro.props;
     }
   </div>
 </div>
+
+<!-- Script para manejar la interactividad -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".toggle-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const container = button.closest(".p_description"); // Asegura que obtiene el contenedor correcto
+        if (!container) return; // Evita errores si container es null
+
+        const shortText = container.querySelector(".short");
+        const fullText = container.querySelector(".full");
+
+        if (!shortText || !fullText) return; // Evita errores si los elementos no existen
+
+        if (fullText.classList.contains("hidden")) {
+          shortText.classList.add("hidden");
+          fullText.classList.remove("hidden");
+          button.textContent = "Ver menos";
+        } else {
+          shortText.classList.remove("hidden");
+          fullText.classList.add("hidden");
+          button.textContent = "Ver más";
+        }
+      });
+    });
+  });
+</script>

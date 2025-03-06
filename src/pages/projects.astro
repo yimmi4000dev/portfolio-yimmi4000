@@ -4,12 +4,17 @@ import HelloComponent from "../components/HelloComponent.jsx";
 ---
 
 <BaseLayout activePage="projects">
+  <!-- Titulo de la pagina projects  -->
   <h1 class="text-[3rem] font-bold text-center mt-16 mb-4">Mis Proyectos</h1>
 
-  <p>
-    Aquí encontrarás algunos de mis trabajos recientes. (Crear un texto
-    introductorio como en about)
+  <!-- Parrafo introductorio -->
+  <p class="text-base text-center mb-2 text-[#4a4a4a]">
+    En esta sección encontrarás algunos de mis proyectos personales, creados en
+    mi tiempo libre para aprender, experimentar y mejorar mis habilidades en
+    desarrollo de software. Me gusta probar ideas, explorar nuevas tecnologías y
+    crear cosas que me parecen interesantes, ya sea con interfaces interactivas,
+    animaciones o pequeños sistemas funcionales.
   </p>
-  <p>(Crear unas tarjetas como en experiencia pero para los proyectos)</p>
-  <HelloComponent client:load />
+
+  <!-- <HelloComponent client:load /> -->
 </BaseLayout>

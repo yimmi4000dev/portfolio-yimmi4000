@@ -25,15 +25,15 @@
 }
 
 .experience h1 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold; /* Texto en negrita */
   margin-bottom: 0.5rem;
   color: #4a4a4a;
 }
 
 .p_description {
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #4a4a4a;
   text-align: justify;
 }
