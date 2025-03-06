@@ -258,7 +258,7 @@ import Experience from "../components/Experience/Experience.astro";
 
   <!-- Contenedor de imagenes para el carrucel2 -->
   <div
-    class="carousel2 flex gap-10 py-2 overflow-x-auto whitespace-nowrap cursor-grab [&::-webkit-scrollbar]:hidden mt-4"
+    class="carousel2 flex gap-10 py-2 overflow-x-auto whitespace-nowrap cursor-grab [&::-webkit-scrollbar]:hidden mt-2"
   >
     <!-- Fila que contiene los logos -->
     <!-- Logo 1 -->
@@ -544,72 +544,77 @@ import Experience from "../components/Experience/Experience.astro";
   <!-- Script con TypeScript -->
   <script>
     // Inicia cuando la pagina haya cargado antes del DOM
-    document.addEventListener("DOMContentLoaded", function () {  
+    document.addEventListener("DOMContentLoaded", function () {
       // Función que configura un carrusel
-  function setupCarousel(carousel: HTMLElement, direction: number) {  
-    // Variables importantes
-    let isDragging = false;  //  Indica si el usuario está arrastrando el carrusel
-    let startX = 0;  // Guarda la posición inicial del mouse al hacer clic
-    let scrollLeft = 0;  // Guarda la posición de desplazamiento antes de arrastrar
-    const scrollSpeed = 0.5;  // Velocidad del desplazamiento automático
-    let animationId: number | null = null;  // Guarda el ID del setInterval para poder detenerlo y evitar duplicados
+      function setupCarousel(carousel: HTMLElement, direction: number) {
+        // Variables importantes
+        let isDragging = false; //  Indica si el usuario está arrastrando el carrusel
+        let startX = 0; // Guarda la posición inicial del mouse al hacer clic
+        let scrollLeft = 0; // Guarda la posición de desplazamiento antes de arrastrar
+        const scrollSpeed = 0.5; // Velocidad del desplazamiento automático
+        let animationId: number | null = null; // Guarda el ID del setInterval para poder detenerlo y evitar duplicados
 
-    // Ajustar posición inicial del carrusel
-    carousel.scrollLeft = direction === -1 ? carousel.scrollWidth - carousel.clientWidth : 0;
+        // Ajustar posición inicial del carrusel
+        carousel.scrollLeft =
+          direction === -1 ? carousel.scrollWidth - carousel.clientWidth : 0;
 
-    // Iniciar desplazamiento automático (evita duplicados)
-    function startAutoScroll() {
-      if (animationId !== null) return; // Si ya está en marcha, no iniciar otra vez
-      animationId = setInterval(() => {
-        carousel.scrollLeft += direction * scrollSpeed;
-        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
-          direction = -1;
-        } else if (carousel.scrollLeft <= 0) {
-          direction = 1;
+        // Iniciar desplazamiento automático (evita duplicados)
+        function startAutoScroll() {
+          if (animationId !== null) return; // Si ya está en marcha, no iniciar otra vez
+          animationId = setInterval(() => {
+            carousel.scrollLeft += direction * scrollSpeed;
+
+            const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+            if (carousel.scrollLeft + 1 >= maxScrollLeft) {
+              // Se agrega "+ 1" para tolerancia
+              direction = -1;
+            } else if (carousel.scrollLeft <= 1) {
+              // Se agrega " <= 1" en vez de " <= 0"
+              direction = 1;
+            }
+          }, 1);
         }
-      }, 1);
-    }
 
-    // Detener desplazamiento automático
-    function stopAutoScroll() {
-      if (animationId !== null) {
-        clearInterval(animationId);
-        animationId = null;
+        // Detener desplazamiento automático
+        function stopAutoScroll() {
+          if (animationId !== null) {
+            clearInterval(animationId);
+            animationId = null;
+          }
+        }
+
+        // Iniciar la animación automática solo una vez
+        startAutoScroll();
+
+        // Eventos para arrastrar manualmente
+        carousel.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          stopAutoScroll();
+          startX = e.pageX;
+          scrollLeft = carousel.scrollLeft;
+        });
+
+        // Cuando el usuario mueve el mouse
+        carousel.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          carousel.scrollLeft = scrollLeft - (e.pageX - startX) * 2;
+        });
+
+        // Cuando el usuario suelta el mouse
+        window.addEventListener("mouseup", () => {
+          isDragging = false;
+          startAutoScroll(); // Reanudar el desplazamiento pero solo si no está ya corriendo
+        });
       }
-    }
 
-    // Iniciar la animación automática solo una vez
-    startAutoScroll();
+      // Busca los elementos del DOM con las clases carousel1 y carousel2
+      const carousel1 = document.querySelector(".carousel1") as HTMLElement;
+      const carousel2 = document.querySelector(".carousel2") as HTMLElement;
 
-    // Eventos para arrastrar manualmente
-    carousel.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      stopAutoScroll();
-      startX = e.pageX;
-      scrollLeft = carousel.scrollLeft;
+      //  Inicia cada carrusel con su dirección correspondiente
+      if (carousel1) setupCarousel(carousel1, 1);
+      if (carousel2) setupCarousel(carousel2, -1);
     });
-
-    // Cuando el usuario mueve el mouse
-    carousel.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      carousel.scrollLeft = scrollLeft - (e.pageX - startX) * 2;
-    });
-
-    // Cuando el usuario suelta el mouse
-    window.addEventListener("mouseup", () => {
-      isDragging = false;
-      startAutoScroll(); // Reanudar el desplazamiento pero solo si no está ya corriendo
-    });
-  }
-
-  // Busca los elementos del DOM con las clases carousel1 y carousel2
-  const carousel1 = document.querySelector(".carousel1") as HTMLElement;
-  const carousel2 = document.querySelector(".carousel2") as HTMLElement;
-
-  //  Inicia cada carrusel con su dirección correspondiente
-  if (carousel1) setupCarousel(carousel1, 1);
-  if (carousel2) setupCarousel(carousel2, -1);
-});
-
   </script>
 </BaseLayout>
