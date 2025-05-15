@@ -19,7 +19,7 @@ const maxChars = 250; // Límite de caracteres antes de mostrar "Ver más"
     <span class="full hidden">{description}</span>
     {
       description.length > maxChars && (
-        <button class="toggle-btn text-blue-500 hover:underline ml-2">
+        <button class="p_boton_ver boton">
           Ver más
         </button>
       )
@@ -36,10 +36,10 @@ const maxChars = 250; // Límite de caracteres antes de mostrar "Ver más"
   </div>
 </div>
 
-<!-- Script para manejar la interactividad -->
+<!-- Script con TypeScript para manejar la interactividad de ver mas -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".toggle-btn").forEach(button => {
+    document.querySelectorAll(".boton").forEach(button => {
       button.addEventListener("click", () => {
         const container = button.closest(".p_description"); // Asegura que obtiene el contenedor correcto
         if (!container) return; // Evita errores si container es null
